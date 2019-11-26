@@ -17,8 +17,8 @@ python2.7 pacman.py
 ### flags
 
 * -h  please use -h for more options
-* -p  <Agents> Ex: MinimaxAgent, AlphaBetaAgent, ExpectimaxAgent
-* -l  <Map> Maps are in diretory layout. Ex: mediumClassic, originClassic
+* -p  <Agents> Ex: MinimaxAgent, AlphaBetaAgent, ExpectimaxAgent, AppxQAgent, ClassicQAgent
+* -l  <Map> Maps are in diretory layout. Ex: smallGrid, mediumClassic, originClassic
 * -n  <Number> The number of games to play
 * -q  Disable game display window to let the game run faster
 * -a  depth=<Number>, set the depth
@@ -31,7 +31,7 @@ python2.7 pacman.py
 cd Project/pacmanAdversialSearch/
 ```
 
-### Training with various agents
+### Training with agents
 
 To see the pacman game with depth 2:
 
@@ -58,6 +58,25 @@ Run the pacman game for 500 times with AlphabetaAgent agent and depth 2:
 python2.7 pacman.py -p AlphaBetaAgent -n 500 -a depth=3 -q evalFn=EvaluationFunction_4features
 ```
 
+## Q-learning and Approximate Q-learning
+
+```
+cd Project/文件夹名
+```
+
+### Training with Q-learning
+
+Train on the smallGrid layout with Q-learning agent, 1500 episodes and test with 100 games
+```
+python2.7 pacman.py -p ClassicQAgent -x 1500 -n 1600 -l smallGrid
+```
+
+### Training with Approximate Q-learning
+
+Train on the mediumClassic layout with Approximate Q-learning agent, selected features specified by SimpleExtractor, 30 episodes and test with 50 games
+```
+python2 pacman.py -p AppxQAgent -a extractor=SimpleExtractor -x 30 -n 80 -l mediumClassic
+```
 
 ## Built With
 
