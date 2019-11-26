@@ -25,7 +25,7 @@ python2.7 pacman.py
       evalFn=<EvaluationFunction>, specify the following Evaluation Functions
 * -x  NUMTRAINING, --numTraining=NUMTRAINING How many episodes are training (suppresses output) [Default: 0]
   
-## Run adversarial search agents for MiniMax, AlphaBetaAgent and Expectimax
+## MiniMax, AlphaBetaAgent and Expectimax
 
 ```
 cd Project/pacmanAdversialSearch/
