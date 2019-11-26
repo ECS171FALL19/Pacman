@@ -1,6 +1,8 @@
 ---
-title: '171 R Analysis'
-output: html_document
+title: "171 Pacman R Analysis"
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
