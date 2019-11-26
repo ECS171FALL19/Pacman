@@ -58,7 +58,6 @@ Run the pacman game for 500 times with AlphabetaAgent agent and depth 2:
 python2.7 pacman.py -p AlphaBetaAgent -n 500 -a depth=3 -q evalFn=EvaluationFunction_4features
 ```
 
--
 
 ## Built With
 
