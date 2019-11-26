@@ -1,0 +1,85 @@
+---
+title: '171'
+date: "11/24/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+rate <- read.csv("~/Desktop/project/rate.csv")
+scores <- read.csv("~/Desktop/project/scores.csv")
+scores_two <- read.csv("~/Desktop/project/scores_two.csv")
+scores_four <- read.csv("~/Desktop/project/scores_four.csv")
+scores_six <- read.csv("~/Desktop/project/scores_six.csv")
+rate_two <- read.csv("~/Desktop/project/rate_two.csv")
+rate_four <- read.csv("~/Desktop/project/rate_four.csv")
+rate_six <- read.csv("~/Desktop/project/rate_six.csv")
+total <- read.csv("~/Desktop/project/total.csv")
+```
+
+#### P-values for features
+
+```{r}
+#c.
+# p_values
+win_rate_model = lm(win_rate ~ method + Depth + feature_val, data = rate)
+anova(win_rate_model)
+
+score_model = lm(scores ~ method + Depth + feature_val, data = scores)
+anova(score_model)
+# correlation
+model_cor = lm(win_rate~scores, data = total)
+plot(win_rate~scores, data = total)
+abline(model_cor)
+summary(model_cor)
+```
+
+#### Plots to test Anova assumptions
+
+```{r}
+#fitted value plot
+plot(win_rate_model$fitted.values, win_rate_model$residuals, ylab = "error", main = "Residuals plotted against the Fitted values")
+abline(h=0)
+# variance has a trend so variance is not normally distributed
+
+#qq plot
+qqnorm(win_rate_model$residuals)
+qqline(win_rate_model$residuals)
+# errors are normally distributed 
+```
+
+#### Interaction model of scores when feature_eval is 2
+```{r}
+interaction.plot(scores_two$method, scores_two$Depth ,scores_two$scores)
+```
+
+#### Interaction model of scores when feature_eval is 4
+```{r}
+interaction.plot(scores_four$method, scores_four$Depth ,scores_four$scores)
+```
+
+#### Interaction model of scores when feature_eval is 6
+```{r}
+interaction.plot(scores_six$method, scores_six$Depth ,scores_six$scores)
+```
+
+#### Interaction model of win rate when feature_eval is 2
+```{r}
+interaction.plot(rate_two$method, rate_two$Depth ,rate_two$win_rate)
+```
+
+#### Interaction model of win rate when feature_eval is 4
+```{r}
+interaction.plot(rate_four$method, rate_four$Depth ,rate_four$win_rate)
+```
+
+#### Interaction model of win rate when feature_eval is 6
+```{r}
+interaction.plot(rate_six$method, rate_six$Depth ,rate_six$win_rate)
+```
+
+
+
+
+
+

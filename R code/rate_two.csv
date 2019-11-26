@@ -1,0 +1,82 @@
+win_rate,method,Depth,feature_val
+0.74,minimax,two,two
+0.74,minimax,two,two
+0.8,minimax,two,two
+0.77,minimax,three,two
+0.78,minimax,three,two
+0.75,minimax,three,two
+0.8,minimax,four,two
+0.79,minimax,four,two
+0.79,minimax,four,two
+0.62,a-b pruning,two,two
+0.63,a-b pruning,two,two
+0.61,a-b pruning,two,two
+0.59,a-b pruning,three,two
+0.61,a-b pruning,three,two
+0.64,a-b pruning,three,two
+0.65,a-b pruning,four,two
+0.69,a-b pruning,four,two
+0.68,a-b pruning,four,two
+0.18,expectimax,two,two
+0.15,expectimax,two,two
+0.16,expectimax,two,two
+0.41,expectimax,three,two
+0.41,expectimax,three,two
+0.41,expectimax,three,two
+0.42,expectimax,four,two
+0.44,expectimax,four,two
+0.46,expectimax,four,two
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,

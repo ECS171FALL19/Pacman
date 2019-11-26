@@ -1,0 +1,28 @@
+win_rate,method,Depth,feature_val
+0.91,minimax,two,six
+0.89,minimax,two,six
+0.89,minimax,two,six
+0.93,minimax,three,six
+0.94,minimax,three,six
+0.9,minimax,three,six
+0.94,minimax,four,six
+0.93,minimax,four,six
+0.94,minimax,four,six
+0.9,a-b pruning,two,six
+0.91,a-b pruning,two,six
+0.88,a-b pruning,two,six
+0.93,a-b pruning,three,six
+0.95,a-b pruning,three,six
+0.92,a-b pruning,three,six
+0.92,a-b pruning,four,six
+0.91,a-b pruning,four,six
+0.92,a-b pruning,four,six
+0.91,expectimax,two,six
+0.91,expectimax,two,six
+0.89,expectimax,two,six
+0.93,expectimax,three,six
+0.93,expectimax,three,six
+0.95,expectimax,three,six
+0.94,expectimax,four,six
+0.94,expectimax,four,six
+0.94,expectimax,four,six
