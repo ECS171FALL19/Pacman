@@ -1,4 +1,6 @@
 # DeepQAgent.py
+# ref: using code from http://ai.berkeley.edu/
+# ref: structure, replay, remember function inspired by https://github.com/ele94/deepQLearningPacman
 import keras
 from keras.models import Sequential
 from keras.layers import Dense, Flatten
@@ -79,23 +81,21 @@ class DeepQAgent(ReinforcementAgent):
             
             values = self.first_model.predict(np.array([self.state_discription]))
 
-            for value in values[0]:
-                action = ACTIONS[(np.argmax(values[0]))]
-                if action not in legalActions:
-                    values[0][np.argmax(values[0])] = float("-inf")
-                else:
+            actions = copy.deepcopy(ACTIONS)
+            actions = [action for _, action in sorted(zip(values, actions), reverse = True)]
+            for a in actions:
+                if a in legalActions:
+                    actions = a
                     break
-
-            if action not in legalActions:
-                action = ACTIONS[4]
                 
-            
+        if action not in legalActions:
+            action = ACTIONS[4]   
         self.doAction(state, action)
         return action
 
     def final(self, state):
         ReinforcementAgent.final(self, state)
-
+        print ("episode so far: %d" % (self.episodesSoFar))
         self.new_episode = True
         if self.training and state.getScore() > self.best_score:
             self.best_score = state.getScore()
