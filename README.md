@@ -61,7 +61,7 @@ python2.7 pacman.py -p AlphaBetaAgent -n 500 -a depth=3 -q evalFn=EvaluationFunc
 ## Q-learning and Approximate Q-learning
 
 ```
-cd Project/文件夹名
+python
 ```
 
 ### Training with Q-learning
