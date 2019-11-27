@@ -68,19 +68,20 @@ cd Project/pacmanLearning/
 
 Train on the smallGrid layout with Q-learning agent, 1500 episodes and test with 100 games
 ```
-python pacman.py -p ClassicQAgent -x 1500 -n 1600 -l smallGrid
+python/python(+version) pacman.py -p ClassicQAgent -x 1500 -n 1600 -l smallGrid
 ```
 
 ### Training with Approximate Q-learning
 
 Train on the mediumClassic layout with Approximate Q-learning agent, selected features specified by SimpleExtractor, 30 episodes and test with 50 games
 ```
-python pacman.py -p AppxQAgent -a extractor=SimpleExtractor -x 30 -n 80 -l mediumClassic
+python/python(+version) pacman.py -p AppxQAgent -a extractor=SimpleExtractor -x 30 -n 80 -l mediumClassic
 ```
 
-## Built With
+## Built With/Version
 
-* Python 2.7
+* Depending on configuration of local python
+* We used Python 2.7
 
 ## R code
 
