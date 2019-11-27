@@ -81,7 +81,7 @@ python/python(+version) pacman.py -p AppxQAgent -a extractor=SimpleExtractor -x 
 ### Training with Approximate Q-learning
 Train on the mediumClassic layout with Deep Q-learning agent, 1000 episodes and test with 10 games
 ```
-python pacman.py -p DeepQAgent -x 1000 -n 1010 -l mediumClassic
+python/python(+version) pacman.py -p DeepQAgent -x 1000 -n 1010 -l mediumClassic
 ```
 ## Built With/Version
 
