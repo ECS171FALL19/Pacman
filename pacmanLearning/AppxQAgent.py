@@ -6,11 +6,15 @@ from game import *
 from featureExtractors import *
 from ClassicQAgent import *
 
+#approximimate Q learning agent
+#inherite from Classic Q agent
 class AppxQAgent(ClassicQAgent):
     def __init__(self, extractor='IdentityExtractor', **args):
-	    self.featExtractor = util.lookup(extractor, globals())()
-	    ClassicQAgent.__init__(self, **args)
-	    self.weights = util.Counter()
+        #feature extractor can extract info from the current state of gam
+        # here we find the user specified extractor
+        self.featExtractor = util.lookup(extractor, globals())()
+        ClassicQAgent.__init__(self, **args)
+        self.weights = util.Counter()
 
     def getWeights(self):
 	    return self.weights
