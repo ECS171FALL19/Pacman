@@ -1,6 +1,6 @@
 # DeepQAgent.py
 import keras
-from keras.first_models import Sequential
+from keras.models import Sequential
 from keras.layers import Dense, Flatten
 from keras.layers import Conv2D
 
@@ -16,8 +16,9 @@ cons = {'grid_width' : 7,
         'grid_height' : 7}
 
 ACTIONS = [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST, Directions.STOP]
-
+    
 class DeepQAgent(ReinforcementAgent):
+    
     def __init__(self, **args):
         ReinforcementAgent.__init__(self, **args)
         self.count = 0
@@ -34,7 +35,7 @@ class DeepQAgent(ReinforcementAgent):
         self.best_score = float("-inf")
 
         self.memory = deque(maxlen=50000)
-        self.first_model = self.getfirst_model(self.grid_width, self.grid_height, len(ACTIONS))
+        self.first_model = self.getModel(self.grid_width, self.grid_height, len(ACTIONS))
         self.second_model = copy.deepcopy(self.first_model)
 
         
@@ -132,7 +133,7 @@ class DeepQAgent(ReinforcementAgent):
         model.add(Dense(256, activation='relu'))
         model.add(Dense(num_actions))
 
-        first_model.compile(loss=keras.losses.categorical_crossentropy,
+        model.compile(loss=keras.losses.categorical_crossentropy,
               optimizer=keras.optimizers.Adadelta(),
               metrics=['accuracy'])
         
