@@ -2,16 +2,12 @@
 
 We applied several machine learning techniques to play the game Pacman. We tried out Q-learning, Approximate Q-Learning and MiniMax algorithm to train the Pacman game.
 
-## Prerequisites
-
-Make sure to run with Python 2.7
-
 ## Game and some useful flags
 
 ### Play the original pacman game manually
 
 ```
-python2.7 pacman.py
+python/python(+version) pacman.py
 ```
 
 ### flags
@@ -36,26 +32,26 @@ cd Project/pacmanAdversialSearch/
 To see the pacman game with depth 2:
 
 ```
-python2.7 pacman.py -p ExpectimaxAgent -a depth=2 evalFn=EvaluationFunction_4features
-python2.7 pacman.py -p AlphaBetaAgent -a depth=2 evalFn=EvaluationFunction_6features
+python/python(+version) pacman.py -p ExpectimaxAgent -a depth=2 evalFn=EvaluationFunction_4features
+python/python(+version) pacman.py -p AlphaBetaAgent -a depth=2 evalFn=EvaluationFunction_6features
 ```
 
 Run the pacman game for 500 times with expectimax agent and depth 4, the display window is turned off: 
 
 ```
-python2.7 pacman.py -p ExpectimaxAgent - depth=4 -q  evalFn=EvaluationFunction_6features
+python/python(+version) pacman.py -p ExpectimaxAgent - depth=4 -q  evalFn=EvaluationFunction_6features
 ```
 
 Run the pacman game for 500 times with minimax agent and depth 2
 
 ```
-python2.7 pacman.py -p MinimaxAgent -n 500 -a depth=2 -q
+python/python(+version) pacman.py -p MinimaxAgent -n 500 -a depth=2 -q
 ```
 
 Run the pacman game for 500 times with AlphabetaAgent agent and depth 2: 
 
 ```
-python2.7 pacman.py -p AlphaBetaAgent -n 500 -a depth=3 -q evalFn=EvaluationFunction_4features
+python/python(+version) pacman.py -p AlphaBetaAgent -n 500 -a depth=3 -q evalFn=EvaluationFunction_4features
 ```
 
 ## Q-learning and Approximate Q-learning
@@ -83,7 +79,7 @@ Train on the mediumClassic layout with Deep Q-learning agent, 1000 episodes and 
 ```
 python/python(+version) pacman.py -p DeepQAgent -x 1000 -n 1010 -l mediumClassic
 ```
-### Built With/Version
+## Built With/Version
 
 * Depending on configuration of local python
 * We used Python 3
