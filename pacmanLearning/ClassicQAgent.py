@@ -63,6 +63,7 @@ class ClassicQAgent(ReinforcementAgent):
         return next_action
 
     def update(self, state, action, nextState, reward):
+        #different weight is assigned to previous Q and next Q, with reward
         newQ = (1.0 - self.alpha) * self.getQValue(state, action) + self.alpha * (reward + self.discount * self.computeValueFromQValues(nextState))
         self.Q_values[(state, action)] = newQ
 
