@@ -81,3 +81,7 @@ python2 pacman.py -p AppxQAgent -a extractor=SimpleExtractor -x 30 -n 80 -l medi
 ## Built With
 
 * Python 2.7
+
+## R code
+
+Plots and statistical values can be found in results.pdf in R code directory. Using R studio or other applications that support `.rmd` file can reproduce the plots and data.
