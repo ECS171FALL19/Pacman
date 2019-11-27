@@ -28,6 +28,8 @@ class AppxQAgent(ClassicQAgent):
         realQ = reward + self.discount * self.getValue(nextState)
         diffQ = realQ - self.getQValue(state, action)
         features = self.featExtractor.getFeatures(state, action)
+
+        #update weight correspoding to each feature, using gradient descent
         for feature in features:
             features[feature] *= self.alpha * diffQ
         self.weights = self.weights + features
