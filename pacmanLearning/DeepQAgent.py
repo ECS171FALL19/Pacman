@@ -109,16 +109,17 @@ class DeepQAgent(ReinforcementAgent):
             self.memory.append((copy.deepcopy(state_discription), action, reward, copy.deepcopy(next_state_discription), done))
 
     def replay(self, batch_size):
-        x_batch, y_batch = [], []
-        minibatch = random.sample(self.memory, batch_size)
-        for (state_discription, action, reward, next_state_discription, done) in minibatch:
+        x_train = []
+        y_train = []
+        batch = random.sample(self.memory, batch_size)
+        for (state_discription, action, reward, next_state_discription, done) in batch:
             action_index = ACTIONS.index(action)
             y = self.first_model.predict(np.array([state_discription]))
             y[0][action_index] = reward if done else reward + self.gamma * np.max(self.first_model.predict(np.array([next_state_discription]))[0])
-            x_batch.append(state_discription)
-            y_batch.append(y[0])
+            x_train.append(state_discription)
+            y_train.append(y[0])
 
-        self.second_model.fit(np.array(x_batch), np.array(y_batch), batch_size=len(x_batch), verbose=0)
+        self.second_model.fit(np.array(x_train), np.array(y_train), batch_size=len(x_train), verbose=0)
 
         if self.count % 100 == 0:
             self.first_model = copy.deepcopy(self.second_model)
