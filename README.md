@@ -83,7 +83,7 @@ Train on the mediumClassic layout with Deep Q-learning agent, 1000 episodes and 
 ```
 python/python(+version) pacman.py -p DeepQAgent -x 1000 -n 1010 -l mediumClassic
 ```
-## Built With/Version
+### Built With/Version
 
 * Depending on configuration of local python
 * We used Python 3
