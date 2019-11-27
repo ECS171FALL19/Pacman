@@ -12,8 +12,8 @@ import numpy as np
 import copy
 from collections import deque
 
-cons = {'grid_width' : 7,
-        'grid_height' : 7}
+cons = {'grid_width' : 20,
+        'grid_height' : 11}
 
 ACTIONS = [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST, Directions.STOP]
     
