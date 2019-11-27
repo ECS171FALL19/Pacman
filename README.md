@@ -61,26 +61,27 @@ python2.7 pacman.py -p AlphaBetaAgent -n 500 -a depth=3 -q evalFn=EvaluationFunc
 ## Q-learning and Approximate Q-learning
 
 ```
-cd Project/文件夹名
+cd Project/pacmanLearning/
 ```
 
 ### Training with Q-learning
 
 Train on the smallGrid layout with Q-learning agent, 1500 episodes and test with 100 games
 ```
-python2.7 pacman.py -p ClassicQAgent -x 1500 -n 1600 -l smallGrid
+python/python(+version) pacman.py -p ClassicQAgent -x 1500 -n 1600 -l smallGrid
 ```
 
 ### Training with Approximate Q-learning
 
 Train on the mediumClassic layout with Approximate Q-learning agent, selected features specified by SimpleExtractor, 30 episodes and test with 50 games
 ```
-python2 pacman.py -p AppxQAgent -a extractor=SimpleExtractor -x 30 -n 80 -l mediumClassic
+python/python(+version) pacman.py -p AppxQAgent -a extractor=SimpleExtractor -x 30 -n 80 -l mediumClassic
 ```
 
-## Built With
+## Built With/Version
 
-* Python 2.7
+* Depending on configuration of local python
+* We used Python 2.7
 
 ## R code
 
