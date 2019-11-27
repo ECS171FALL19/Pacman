@@ -2,16 +2,12 @@
 
 We applied several machine learning techniques to play the game Pacman. We tried out Q-learning, Approximate Q-Learning and MiniMax algorithm to train the Pacman game.
 
-## Prerequisites
-
-Make sure to run with Python 2.7
-
 ## Game and some useful flags
 
 ### Play the original pacman game manually
 
 ```
-python2.7 pacman.py
+python/python(+version) pacman.py
 ```
 
 ### flags
