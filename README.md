@@ -68,14 +68,14 @@ cd Project/pacmanLearning/
 
 Train on the smallGrid layout with Q-learning agent, 1500 episodes and test with 100 games
 ```
-python2.7 pacman.py -p ClassicQAgent -x 1500 -n 1600 -l smallGrid
+python pacman.py -p ClassicQAgent -x 1500 -n 1600 -l smallGrid
 ```
 
 ### Training with Approximate Q-learning
 
 Train on the mediumClassic layout with Approximate Q-learning agent, selected features specified by SimpleExtractor, 30 episodes and test with 50 games
 ```
-python2 pacman.py -p AppxQAgent -a extractor=SimpleExtractor -x 30 -n 80 -l mediumClassic
+python pacman.py -p AppxQAgent -a extractor=SimpleExtractor -x 30 -n 80 -l mediumClassic
 ```
 
 ## Built With
