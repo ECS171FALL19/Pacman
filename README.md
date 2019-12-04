@@ -37,14 +37,14 @@ cd Project/pacmanAdversialSearch/
 To see the pacman game with depth 2:
 
 ```
-python/python(+version) pacman.py -p ExpectimaxAgent -a depth=2 evalFn=EvaluationFunction_4features
-python/python(+version) pacman.py -p AlphaBetaAgent -a depth=2 evalFn=EvaluationFunction_6features
+python/python(+version) pacman.py -p ExpectimaxAgent -a depth=2 -a evalFn=EvaluationFunction_4features
+python/python(+version) pacman.py -p AlphaBetaAgent -a depth=2 -a evalFn=EvaluationFunction_6features
 ```
 
 Run the pacman game for 500 times with expectimax agent and depth 4, the display window is turned off: 
 
 ```
-python/python(+version) pacman.py -p ExpectimaxAgent - depth=4 -q  evalFn=EvaluationFunction_6features
+python/python(+version) pacman.py -p ExpectimaxAgent - depth=4 -q -a evalFn=EvaluationFunction_6features
 ```
 
 Run the pacman game for 500 times with minimax agent and depth 2
@@ -56,7 +56,7 @@ python/python(+version) pacman.py -p MinimaxAgent -n 500 -a depth=2 -q
 Run the pacman game for 500 times with AlphabetaAgent agent and depth 2: 
 
 ```
-python/python(+version) pacman.py -p AlphaBetaAgent -n 500 -a depth=3 -q evalFn=EvaluationFunction_4features
+python/python(+version) pacman.py -p AlphaBetaAgent -n 500 -a depth=3 -q -a evalFn=EvaluationFunction_4features
 ```
 
 ## Q-learning and Approximate Q-learning
